@@ -1,0 +1,78 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.section{
+    height:100vh;
+    width:100%;
+    background-image: url(image/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s ease;
+}
+
+.section p{
+    color: white;
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-40%);
+    font-size: 40px;
+}
+
+.section button{
+    padding:20px 80px;
+    position: absolute;
+    top:60%;
+    left:50%;
+    transform: translate(-50%,-60%);
+    background:none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.section button:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.modal{
+    width:60%;
+    height:40vh;
+    background: white;
+    color: black;
+    z-index: 2;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:20px;
+    display: flex;
+    animation: drop 1s;
+    transition: ease-in-out;
+    display: none;
+}
+
+@keyframes drop{
+    0%{
+        top:-100px;
+    }
+    100%{
+        top: 50%;
+    }
+}
+
+.modal span{
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right:30px;
+    top:10px;
+}
